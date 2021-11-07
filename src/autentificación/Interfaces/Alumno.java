@@ -53,6 +53,10 @@ public class Alumno extends javax.swing.JInternalFrame {
         Rd_Msculino = new javax.swing.JRadioButton();
         Rd_femeninio = new javax.swing.JRadioButton();
 
+        setMaximumSize(new java.awt.Dimension(530, 410));
+        setMinimumSize(new java.awt.Dimension(530, 410));
+        setPreferredSize(new java.awt.Dimension(530, 410));
+
         Label_nombre.setText("Nombre");
 
         Label_Apellido.setText("Apellido");

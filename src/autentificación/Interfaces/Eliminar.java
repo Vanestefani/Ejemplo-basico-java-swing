@@ -45,6 +45,11 @@ public class Eliminar extends javax.swing.JInternalFrame {
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
 
+        setMaximumSize(new java.awt.Dimension(530, 410));
+        setMinimumSize(new java.awt.Dimension(530, 410));
+        setPreferredSize(new java.awt.Dimension(530, 410));
+        setVisible(true);
+
         ButtonGroup2.add(jRadioButton1);
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("ESTUDIANTE");

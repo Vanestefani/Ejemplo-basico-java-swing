@@ -7,6 +7,7 @@ import autentificación.Interfaces.Estudiante;
 import autentificación.Interfaces.Eliminar;
 import autentificación.Interfaces.Circulo;
 import autentificación.Interfaces.Alumno;
+import java.awt.Color;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -20,7 +21,7 @@ import autentificación.Interfaces.Alumno;
  * @author USUARIO
  */
 public class Menu extends javax.swing.JFrame {
-
+int xMouse,yMouse;
     /**
      * Creates new form Menu
      */
@@ -38,149 +39,324 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem3 = new javax.swing.JMenuItem();
-        jDesktopPane2 = new javax.swing.JDesktopPane();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        Dasboard = new javax.swing.JPanel();
+        PanelDerecha = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        TituloMenu = new javax.swing.JLabel();
+        ConsultarAlum = new javax.swing.JButton();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        Calculadora = new javax.swing.JButton();
+        DeleteAlumn = new javax.swing.JButton();
+        InsertasAlumnos = new javax.swing.JButton();
+        Circulo = new javax.swing.JButton();
+        PanelBarraSuperior = new javax.swing.JPanel();
+        Btn_Salir = new javax.swing.JButton();
+        Contenido = new javax.swing.JPanel();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
 
         jMenuItem3.setText("jMenuItem3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(243, 241, 245));
+        setLocationByPlatform(true);
+        setMaximumSize(new java.awt.Dimension(740, 500));
+        setMinimumSize(new java.awt.Dimension(740, 500));
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(740, 500));
+        setResizable(false);
+        setSize(new java.awt.Dimension(740, 500));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jDesktopPane2Layout = new javax.swing.GroupLayout(jDesktopPane2);
-        jDesktopPane2.setLayout(jDesktopPane2Layout);
-        jDesktopPane2Layout.setHorizontalGroup(
-            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 475, Short.MAX_VALUE)
+        Dasboard.setBackground(new java.awt.Color(255, 255, 255));
+        Dasboard.setMaximumSize(new java.awt.Dimension(740, 500));
+        Dasboard.setMinimumSize(new java.awt.Dimension(740, 500));
+        Dasboard.setPreferredSize(new java.awt.Dimension(740, 500));
+        Dasboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PanelDerecha.setBackground(new java.awt.Color(25, 52, 152));
+        PanelDerecha.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        PanelDerecha.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 170, 20));
+
+        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        PanelDerecha.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 170, 20));
+
+        jSeparator3.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
+        PanelDerecha.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 170, 20));
+
+        TituloMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        TituloMenu.setForeground(new java.awt.Color(255, 255, 255));
+        TituloMenu.setText("Menu");
+        TituloMenu.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        PanelDerecha.add(TituloMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 80, 50));
+
+        ConsultarAlum.setBackground(new java.awt.Color(25, 52, 152));
+        ConsultarAlum.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ConsultarAlum.setForeground(new java.awt.Color(255, 255, 255));
+        ConsultarAlum.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autentificación/Imagenes/icons8-google-web-search-24.png"))); // NOI18N
+        ConsultarAlum.setText("Consultar Alumnos");
+        ConsultarAlum.setToolTipText("");
+        ConsultarAlum.setBorder(null);
+        ConsultarAlum.setBorderPainted(false);
+        ConsultarAlum.setContentAreaFilled(false);
+        ConsultarAlum.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ConsultarAlumMouseClicked(evt);
+            }
+        });
+        ConsultarAlum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConsultarAlumActionPerformed(evt);
+            }
+        });
+        PanelDerecha.add(ConsultarAlum, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 170, 40));
+
+        jSeparator4.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
+        PanelDerecha.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 170, 20));
+
+        jSeparator5.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
+        PanelDerecha.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 170, 20));
+
+        Calculadora.setBackground(new java.awt.Color(25, 52, 152));
+        Calculadora.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Calculadora.setForeground(new java.awt.Color(255, 255, 255));
+        Calculadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autentificación/Imagenes/icons8-calculator-24.png"))); // NOI18N
+        Calculadora.setText("Calculadora");
+        Calculadora.setToolTipText("");
+        Calculadora.setBorder(null);
+        Calculadora.setBorderPainted(false);
+        Calculadora.setContentAreaFilled(false);
+        Calculadora.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CalculadoraMouseClicked(evt);
+            }
+        });
+        Calculadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CalculadoraActionPerformed(evt);
+            }
+        });
+        PanelDerecha.add(Calculadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 170, 40));
+
+        DeleteAlumn.setBackground(new java.awt.Color(25, 52, 152));
+        DeleteAlumn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        DeleteAlumn.setForeground(new java.awt.Color(255, 255, 255));
+        DeleteAlumn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autentificación/Imagenes/icons8-delete-24.png"))); // NOI18N
+        DeleteAlumn.setText("Eliminar Alumnos");
+        DeleteAlumn.setToolTipText("");
+        DeleteAlumn.setBorder(null);
+        DeleteAlumn.setBorderPainted(false);
+        DeleteAlumn.setContentAreaFilled(false);
+        DeleteAlumn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DeleteAlumnMouseClicked(evt);
+            }
+        });
+        DeleteAlumn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteAlumnActionPerformed(evt);
+            }
+        });
+        PanelDerecha.add(DeleteAlumn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 170, 40));
+
+        InsertasAlumnos.setBackground(new java.awt.Color(25, 52, 152));
+        InsertasAlumnos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        InsertasAlumnos.setForeground(new java.awt.Color(255, 255, 255));
+        InsertasAlumnos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autentificación/Imagenes/icons8-cuadrado-redondeado-24.png"))); // NOI18N
+        InsertasAlumnos.setText("Registrar Alumnos");
+        InsertasAlumnos.setToolTipText("");
+        InsertasAlumnos.setBorder(null);
+        InsertasAlumnos.setBorderPainted(false);
+        InsertasAlumnos.setContentAreaFilled(false);
+        InsertasAlumnos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                InsertasAlumnosMouseClicked(evt);
+            }
+        });
+        InsertasAlumnos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InsertasAlumnosActionPerformed(evt);
+            }
+        });
+        PanelDerecha.add(InsertasAlumnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 170, 40));
+
+        Circulo.setBackground(new java.awt.Color(25, 52, 152));
+        Circulo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Circulo.setForeground(new java.awt.Color(255, 255, 255));
+        Circulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/autentificación/Imagenes/icons8-burbuja-24.png"))); // NOI18N
+        Circulo.setText("Circulo");
+        Circulo.setToolTipText("");
+        Circulo.setBorder(null);
+        Circulo.setBorderPainted(false);
+        Circulo.setContentAreaFilled(false);
+        Circulo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CirculoMouseClicked(evt);
+            }
+        });
+        Circulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CirculoActionPerformed(evt);
+            }
+        });
+        PanelDerecha.add(Circulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 112, 170, 40));
+
+        Dasboard.add(PanelDerecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 500));
+
+        PanelBarraSuperior.setBackground(new java.awt.Color(255, 255, 255));
+        PanelBarraSuperior.setOpaque(false);
+        PanelBarraSuperior.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                PanelBarraSuperiorMouseDragged(evt);
+            }
+        });
+        PanelBarraSuperior.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PanelBarraSuperiorMousePressed(evt);
+            }
+        });
+        PanelBarraSuperior.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Btn_Salir.setBackground(new java.awt.Color(255, 255, 255));
+        Btn_Salir.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Btn_Salir.setForeground(new java.awt.Color(25, 52, 152));
+        Btn_Salir.setText("X");
+        Btn_Salir.setToolTipText("Cerrar programa");
+        Btn_Salir.setBorder(null);
+        Btn_Salir.setBorderPainted(false);
+        Btn_Salir.setContentAreaFilled(false);
+        Btn_Salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Btn_Salir.setDefaultCapable(false);
+        Btn_Salir.setFocusPainted(false);
+        Btn_Salir.setFocusable(false);
+        Btn_Salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Btn_SalirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Btn_SalirMouseExited(evt);
+            }
+        });
+        Btn_Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_SalirActionPerformed(evt);
+            }
+        });
+        PanelBarraSuperior.add(Btn_Salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 10, 20, -1));
+
+        Dasboard.add(PanelBarraSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 50));
+
+        Contenido.setBackground(new java.awt.Color(255, 0, 255));
+        Contenido.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jDesktopPane1.setMaximumSize(new java.awt.Dimension(530, 410));
+        jDesktopPane1.setMinimumSize(new java.awt.Dimension(530, 410));
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 540, Short.MAX_VALUE)
         );
-        jDesktopPane2Layout.setVerticalGroup(
-            jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 311, Short.MAX_VALUE)
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 410, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Archivos");
+        Contenido.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 410));
 
-        jMenuItem1.setText("Circulo");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem1);
+        Dasboard.add(Contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 530, 410));
 
-        jMenuItem4.setText("Cuadrado");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem4);
-
-        jMenuItem2.setText("Insertar");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem2);
-
-        jMenuItem5.setText("Consultar");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem5);
-
-        jMenuItem6.setText("Eliminar");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem6);
-
-        jMenuItem7.setText("Calculadora");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem7);
-
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Salir");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jDesktopPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jDesktopPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        getContentPane().add(Dasboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void CirculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CirculoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CirculoActionPerformed
+
+    private void CirculoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CirculoMouseClicked
         Circulo cir=new Circulo();
-        this.jDesktopPane2.add(cir);
+        this.jDesktopPane1.add(cir);
         cir.setVisible(true);
         
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+       
+    }//GEN-LAST:event_CirculoMouseClicked
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
+    private void InsertasAlumnosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InsertasAlumnosMouseClicked
         Alumno alu=new Alumno();
-        this.jDesktopPane2.add(alu);
+        this.jDesktopPane1.add(alu);
         alu.setVisible(true);
-        
-        
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_InsertasAlumnosMouseClicked
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void InsertasAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertasAlumnosActionPerformed
         // TODO add your handling code here:
-         Estudiante estu=new Estudiante();
-        this.jDesktopPane2.add(estu);
+    }//GEN-LAST:event_InsertasAlumnosActionPerformed
+
+    private void ConsultarAlumMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConsultarAlumMouseClicked
+          Estudiante estu=new Estudiante();
+        this.jDesktopPane1.add(estu);
         estu.setVisible(true);
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_ConsultarAlumMouseClicked
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void ConsultarAlumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultarAlumActionPerformed
         // TODO add your handling code here:
-         Eliminar elim=new Eliminar();
-        this.jDesktopPane2.add(elim);
+    }//GEN-LAST:event_ConsultarAlumActionPerformed
+
+    private void DeleteAlumnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteAlumnMouseClicked
+       Eliminar elim=new Eliminar();
+        this.jDesktopPane1.add(elim);
         elim.setVisible(true);
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_DeleteAlumnMouseClicked
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void DeleteAlumnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteAlumnActionPerformed
         // TODO add your handling code here:
+    }//GEN-LAST:event_DeleteAlumnActionPerformed
+
+    private void CalculadoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CalculadoraMouseClicked
         Calculadora1 cal=new Calculadora1();
-        this.jDesktopPane2.add(cal);
+        this.jDesktopPane1.add(cal);
         cal.setVisible(true);
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_CalculadoraMouseClicked
+
+    private void CalculadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalculadoraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CalculadoraActionPerformed
+
+    private void Btn_SalirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Btn_SalirMouseEntered
+        Btn_Salir.setForeground(new Color(255, 20, 20));
+    }//GEN-LAST:event_Btn_SalirMouseEntered
+
+    private void Btn_SalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Btn_SalirMouseExited
+        Btn_Salir.setForeground(new Color(25,52,152));
+    }//GEN-LAST:event_Btn_SalirMouseExited
+
+    private void Btn_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_SalirActionPerformed
+        System.exit(0);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_SalirActionPerformed
+
+    private void PanelBarraSuperiorMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelBarraSuperiorMouseDragged
+        int  x= evt.getXOnScreen();
+        int  y= evt.getYOnScreen();
+        this.setLocation(x-xMouse,y- yMouse);
+    }//GEN-LAST:event_PanelBarraSuperiorMouseDragged
+
+    private void PanelBarraSuperiorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelBarraSuperiorMousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_PanelBarraSuperiorMousePressed
 
     /**
      * @param args the command line arguments
@@ -218,16 +394,23 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane jDesktopPane2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JButton Btn_Salir;
+    private javax.swing.JButton Calculadora;
+    private javax.swing.JButton Circulo;
+    private javax.swing.JButton ConsultarAlum;
+    private javax.swing.JPanel Contenido;
+    private javax.swing.JPanel Dasboard;
+    private javax.swing.JButton DeleteAlumn;
+    private javax.swing.JButton InsertasAlumnos;
+    private javax.swing.JPanel PanelBarraSuperior;
+    private javax.swing.JPanel PanelDerecha;
+    private javax.swing.JLabel TituloMenu;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
     // End of variables declaration//GEN-END:variables
 }

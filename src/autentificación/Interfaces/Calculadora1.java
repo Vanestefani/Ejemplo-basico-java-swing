@@ -44,6 +44,10 @@ public class Calculadora1 extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
+        setMaximumSize(new java.awt.Dimension(530, 410));
+        setMinimumSize(new java.awt.Dimension(530, 410));
+        setPreferredSize(new java.awt.Dimension(530, 410));
+
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jButton2.setText("LIMPIAR");
 
@@ -184,8 +188,7 @@ public class Calculadora1 extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton2)))
+                    .addComponent(jButton2))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
 
