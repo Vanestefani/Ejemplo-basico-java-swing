@@ -48,7 +48,7 @@ public class Eliminar extends javax.swing.JInternalFrame {
         setMaximumSize(new java.awt.Dimension(530, 410));
         setMinimumSize(new java.awt.Dimension(530, 410));
         setPreferredSize(new java.awt.Dimension(530, 410));
-        setVisible(true);
+        setVisible(false);
 
         ButtonGroup2.add(jRadioButton1);
         jRadioButton1.setSelected(true);
@@ -161,10 +161,12 @@ public class Eliminar extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+
         // TODO add your handling code here:
         logica conec= new logica();
         int rs=0;
-        int rs1=0;
+        
         if(jRadioButton1.getModel().isSelected())
         {
             String codigo=this.jTextField1.getText();

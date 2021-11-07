@@ -39,137 +39,145 @@ public class Alumno extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         Sexo = new javax.swing.ButtonGroup();
+        panelprincipal = new javax.swing.JPanel();
         Label_nombre = new javax.swing.JLabel();
-        txt_nombre = new javax.swing.JTextField();
         Label_Apellido = new javax.swing.JLabel();
-        txt_apellido = new javax.swing.JTextField();
-        Label_Grado = new javax.swing.JLabel();
         txt_Grado = new javax.swing.JTextField();
-        Label_sexo = new javax.swing.JLabel();
-        Btn_ingreso = new javax.swing.JButton();
+        Label_Grado = new javax.swing.JLabel();
         Btn_Registro = new javax.swing.JButton();
-        Panel_titulo = new javax.swing.JDesktopPane();
+        Btn_ingreso = new javax.swing.JButton();
+        txt_apellido = new javax.swing.JTextField();
+        txt_nombre = new javax.swing.JTextField();
         txt_titulo = new javax.swing.JLabel();
-        Rd_Msculino = new javax.swing.JRadioButton();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jPanel1 = new javax.swing.JPanel();
         Rd_femeninio = new javax.swing.JRadioButton();
+        Rd_Msculino = new javax.swing.JRadioButton();
+        jSeparator4 = new javax.swing.JSeparator();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBorder(null);
+        setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        setTitle("Registrar alumnos");
+        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/autentificación/Imagenes/icons8-cuadrado-redondeado-24.png"))); // NOI18N
         setMaximumSize(new java.awt.Dimension(530, 410));
         setMinimumSize(new java.awt.Dimension(530, 410));
         setPreferredSize(new java.awt.Dimension(530, 410));
+        setVisible(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        panelprincipal.setBackground(new java.awt.Color(255, 255, 255));
+        panelprincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Label_nombre.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Label_nombre.setForeground(new java.awt.Color(25, 52, 152));
         Label_nombre.setText("Nombre");
+        panelprincipal.add(Label_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 70, 30));
 
+        Label_Apellido.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Label_Apellido.setForeground(new java.awt.Color(25, 52, 152));
         Label_Apellido.setText("Apellido");
+        panelprincipal.add(Label_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
 
+        txt_Grado.setBackground(new java.awt.Color(255, 255, 255));
+        txt_Grado.setBorder(null);
+        panelprincipal.add(txt_Grado, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 274, 27));
+
+        Label_Grado.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Label_Grado.setForeground(new java.awt.Color(25, 52, 152));
         Label_Grado.setText("Grado");
+        panelprincipal.add(Label_Grado, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, -1, -1));
 
-        Label_sexo.setText("Sexo");
-
-        Btn_ingreso.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        Btn_ingreso.setText("INGRESO");
-        Btn_ingreso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Btn_ingresoActionPerformed(evt);
-            }
-        });
-
-        Btn_Registro.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        Btn_Registro.setBackground(new java.awt.Color(25, 52, 152));
+        Btn_Registro.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Btn_Registro.setForeground(new java.awt.Color(255, 255, 255));
         Btn_Registro.setText("NUEVO");
+        Btn_Registro.setBorder(null);
+        Btn_Registro.setBorderPainted(false);
         Btn_Registro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Btn_RegistroActionPerformed(evt);
             }
         });
+        panelprincipal.add(Btn_Registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 350, 100, 40));
 
-        txt_titulo.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
-        txt_titulo.setText("Ingrese los datos del usuario");
-
-        Panel_titulo.setLayer(txt_titulo, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        javax.swing.GroupLayout Panel_tituloLayout = new javax.swing.GroupLayout(Panel_titulo);
-        Panel_titulo.setLayout(Panel_tituloLayout);
-        Panel_tituloLayout.setHorizontalGroup(
-            Panel_tituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_tituloLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txt_titulo)
-                .addGap(77, 77, 77))
-        );
-        Panel_tituloLayout.setVerticalGroup(
-            Panel_tituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Panel_tituloLayout.createSequentialGroup()
-                .addComponent(txt_titulo)
-                .addGap(0, 12, Short.MAX_VALUE))
-        );
-
-        Rd_Msculino.setText("Masculino");
-        Rd_Msculino.addActionListener(new java.awt.event.ActionListener() {
+        Btn_ingreso.setBackground(new java.awt.Color(25, 52, 152));
+        Btn_ingreso.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Btn_ingreso.setForeground(new java.awt.Color(255, 255, 255));
+        Btn_ingreso.setText("CREAR");
+        Btn_ingreso.setBorder(null);
+        Btn_ingreso.setBorderPainted(false);
+        Btn_ingreso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Rd_MsculinoActionPerformed(evt);
+                Btn_ingresoActionPerformed(evt);
             }
         });
+        panelprincipal.add(Btn_ingreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 100, 40));
 
+        txt_apellido.setBackground(new java.awt.Color(255, 255, 255));
+        txt_apellido.setBorder(null);
+        panelprincipal.add(txt_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 274, 25));
+
+        txt_nombre.setBackground(new java.awt.Color(255, 255, 255));
+        txt_nombre.setForeground(new java.awt.Color(25, 52, 152));
+        txt_nombre.setBorder(null);
+        panelprincipal.add(txt_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 270, 27));
+
+        txt_titulo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        txt_titulo.setForeground(new java.awt.Color(25, 52, 152));
+        txt_titulo.setText("Registrar alumno");
+        panelprincipal.add(txt_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, -1, 30));
+
+        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setForeground(new java.awt.Color(25, 52, 152));
+        panelprincipal.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 270, 20));
+
+        jSeparator3.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator3.setForeground(new java.awt.Color(25, 52, 152));
+        panelprincipal.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 270, 20));
+
+        jSeparator5.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator5.setForeground(new java.awt.Color(25, 52, 152));
+        panelprincipal.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 270, 20));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Genero", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(25, 52, 152))); // NOI18N
+        jPanel1.setLayout(new java.awt.GridBagLayout());
+
+        Rd_femeninio.setBackground(new java.awt.Color(255, 255, 255));
+        Sexo.add(Rd_femeninio);
+        Rd_femeninio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Rd_femeninio.setForeground(new java.awt.Color(25, 52, 152));
         Rd_femeninio.setText("Femenino");
         Rd_femeninio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Rd_femeninioActionPerformed(evt);
             }
         });
+        jPanel1.add(Rd_femeninio, new java.awt.GridBagConstraints());
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Panel_titulo, javax.swing.GroupLayout.Alignment.TRAILING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(40, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Label_nombre)
-                    .addComponent(Label_Apellido)
-                    .addComponent(Label_Grado)
-                    .addComponent(Label_sexo))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Btn_ingreso)
-                        .addGap(69, 69, 69)
-                        .addComponent(Btn_Registro))
-                    .addComponent(txt_apellido, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
-                    .addComponent(txt_nombre)
-                    .addComponent(txt_Grado, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Rd_femeninio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Rd_Msculino, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(37, 37, 37))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Panel_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Label_nombre)
-                    .addComponent(txt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Label_Apellido)
-                    .addComponent(txt_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Label_Grado)
-                    .addComponent(txt_Grado, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Label_sexo)
-                    .addComponent(Rd_femeninio)
-                    .addComponent(Rd_Msculino))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Btn_ingreso)
-                    .addComponent(Btn_Registro))
-                .addContainerGap())
-        );
+        Rd_Msculino.setBackground(new java.awt.Color(255, 255, 255));
+        Sexo.add(Rd_Msculino);
+        Rd_Msculino.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Rd_Msculino.setForeground(new java.awt.Color(25, 52, 152));
+        Rd_Msculino.setText("Masculino");
+        Rd_Msculino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Rd_MsculinoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Rd_Msculino, new java.awt.GridBagConstraints());
+
+        panelprincipal.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 370, 70));
+
+        getContentPane().add(panelprincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 550, 410));
+
+        jSeparator4.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator4.setForeground(new java.awt.Color(25, 52, 152));
+        jSeparator4.setOpaque(true);
+        getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 270, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -182,8 +190,17 @@ public class Alumno extends javax.swing.JInternalFrame {
             String nombre= this.txt_nombre.getText();
             String apellido=this.txt_apellido.getText();
             String grado=this.txt_Grado.getText();
-         //   String sexo=this.jTextField5.getText();
-            String sql="insert into  alumno(nombre,apellido,grado,sexo)values('"+nombre+"','"+apellido+"','"+grado+"')";
+            String sexo ;
+            if (this.Rd_femeninio.getModel().isSelected()){
+           sexo= "Femenino" ;
+            }else {
+            sexo=  "Masculino" ;
+            } ;  
+                    
+                  
+    
+            //   String sexo=this.jTextField5.getText();
+            String sql="insert into  alumno(nombre,apellido,grado,sexo)values('"+nombre+"','"+apellido+"','"+grado+"','"+sexo+"')";
         try {
             rs=conec.InsertarGeneralSQL(sql);
         } catch (ClassNotFoundException ex) {
@@ -234,11 +251,15 @@ public class Alumno extends javax.swing.JInternalFrame {
     private javax.swing.JLabel Label_Apellido;
     private javax.swing.JLabel Label_Grado;
     private javax.swing.JLabel Label_nombre;
-    private javax.swing.JLabel Label_sexo;
-    private javax.swing.JDesktopPane Panel_titulo;
     public javax.swing.JRadioButton Rd_Msculino;
     public javax.swing.JRadioButton Rd_femeninio;
     private javax.swing.ButtonGroup Sexo;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JPanel panelprincipal;
     private javax.swing.JTextField txt_Grado;
     private javax.swing.JTextField txt_apellido;
     private javax.swing.JTextField txt_nombre;

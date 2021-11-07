@@ -1,7 +1,5 @@
 package autentificación.Interfaces;
 
-
-
 import autentificación.Interfaces.Calculadora1;
 import autentificación.Interfaces.Estudiante;
 import autentificación.Interfaces.Eliminar;
@@ -14,22 +12,20 @@ import java.awt.Color;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 /**
  *
  * @author USUARIO
  */
 public class Menu extends javax.swing.JFrame {
-int xMouse,yMouse;
+
+    int xMouse, yMouse;
+
     /**
      * Creates new form Menu
      */
     public Menu() {
         initComponents();
-         Circulo cir=new Circulo();
-        this.jDesktopPane1.add(cir);
-        cir.setVisible(true);
+       
     }
 
     /**
@@ -318,27 +314,65 @@ int xMouse,yMouse;
     }//GEN-LAST:event_CirculoActionPerformed
 
     private void CirculoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CirculoMouseClicked
-        Circulo cir=new Circulo();
+        Circulo cir = new Circulo();
+        Alumno alu = new Alumno();
+        Estudiante estu = new Estudiante();
+        Eliminar elim = new Eliminar();
+        Calculadora1 cal = new Calculadora1();
+
         this.jDesktopPane1.add(cir);
         cir.setVisible(true);
-        
+        alu.setVisible(false);
+        estu.setVisible(false);
+        elim.setVisible(false);
+        cal.setVisible(false);
        
+
+
     }//GEN-LAST:event_CirculoMouseClicked
 
     private void InsertasAlumnosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InsertasAlumnosMouseClicked
-        Alumno alu=new Alumno();
+        Alumno alu = new Alumno();
+        Circulo cir = new Circulo();
+        Estudiante estu = new Estudiante();
+        Eliminar elim = new Eliminar();
+        Calculadora1 cal = new Calculadora1();
         this.jDesktopPane1.add(alu);
         alu.setVisible(true);
+        estu.setVisible(false);
+        cir.setVisible(false);
+        elim.setVisible(false);
+        cal.setVisible(false);
     }//GEN-LAST:event_InsertasAlumnosMouseClicked
 
     private void InsertasAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsertasAlumnosActionPerformed
-        // TODO add your handling code here:
+         Alumno alu = new Alumno();
+        Circulo cir = new Circulo();
+        Estudiante estu = new Estudiante();
+        Eliminar elim = new Eliminar();
+        Calculadora1 cal = new Calculadora1();
+        this.jDesktopPane1.add(alu);
+        alu.setVisible(true);
+        estu.setVisible(false);
+        cir.setVisible(false);
+        elim.setVisible(false);
+        cal.setVisible(false);
     }//GEN-LAST:event_InsertasAlumnosActionPerformed
 
     private void ConsultarAlumMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConsultarAlumMouseClicked
-          Estudiante estu=new Estudiante();
+        Alumno alu = new Alumno();
+        Circulo cir = new Circulo();
+        Estudiante estu = new Estudiante();
+        Eliminar elim = new Eliminar();
+        Calculadora1 cal = new Calculadora1();
+
         this.jDesktopPane1.add(estu);
         estu.setVisible(true);
+        alu.setVisible(false);
+
+        cir.setVisible(false);
+        elim.setVisible(false);
+        cal.setVisible(false);
     }//GEN-LAST:event_ConsultarAlumMouseClicked
 
     private void ConsultarAlumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConsultarAlumActionPerformed
@@ -346,9 +380,19 @@ int xMouse,yMouse;
     }//GEN-LAST:event_ConsultarAlumActionPerformed
 
     private void DeleteAlumnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteAlumnMouseClicked
-       Eliminar elim=new Eliminar();
+        Alumno alu = new Alumno();
+        Circulo cir = new Circulo();
+        Estudiante estu = new Estudiante();
+        Eliminar elim = new Eliminar();
+        Calculadora1 cal = new Calculadora1();
         this.jDesktopPane1.add(elim);
         elim.setVisible(true);
+        estu.setVisible(false);
+        alu.setVisible(false);
+
+        cir.setVisible(false);
+
+        cal.setVisible(false);
     }//GEN-LAST:event_DeleteAlumnMouseClicked
 
     private void DeleteAlumnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteAlumnActionPerformed
@@ -356,9 +400,20 @@ int xMouse,yMouse;
     }//GEN-LAST:event_DeleteAlumnActionPerformed
 
     private void CalculadoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CalculadoraMouseClicked
-        Calculadora1 cal=new Calculadora1();
+        Alumno alu = new Alumno();
+        Circulo cir = new Circulo();
+        Estudiante estu = new Estudiante();
+        Eliminar elim = new Eliminar();
+        Calculadora1 cal = new Calculadora1();
         this.jDesktopPane1.add(cal);
         cal.setVisible(true);
+        elim.setVisible(false);
+        estu.setVisible(false);
+        alu.setVisible(false);
+
+        cir.setVisible(false);
+
+
     }//GEN-LAST:event_CalculadoraMouseClicked
 
     private void CalculadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalculadoraActionPerformed
@@ -370,7 +425,7 @@ int xMouse,yMouse;
     }//GEN-LAST:event_Btn_SalirMouseEntered
 
     private void Btn_SalirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Btn_SalirMouseExited
-        Btn_Salir.setForeground(new Color(25,52,152));
+        Btn_Salir.setForeground(new Color(25, 52, 152));
     }//GEN-LAST:event_Btn_SalirMouseExited
 
     private void Btn_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_SalirActionPerformed
@@ -380,9 +435,9 @@ int xMouse,yMouse;
     }//GEN-LAST:event_Btn_SalirActionPerformed
 
     private void PanelBarraSuperiorMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelBarraSuperiorMouseDragged
-        int  x= evt.getXOnScreen();
-        int  y= evt.getYOnScreen();
-        this.setLocation(x-xMouse,y- yMouse);
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_PanelBarraSuperiorMouseDragged
 
     private void PanelBarraSuperiorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PanelBarraSuperiorMousePressed
@@ -391,7 +446,7 @@ int xMouse,yMouse;
     }//GEN-LAST:event_PanelBarraSuperiorMousePressed
 
     private void CirculoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CirculoMouseEntered
-       Circulo.setForeground(new Color (105, 218, 219));
+        Circulo.setForeground(new Color(105, 218, 219));
     }//GEN-LAST:event_CirculoMouseEntered
 
     private void CirculoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CirculoMouseExited
@@ -399,35 +454,35 @@ int xMouse,yMouse;
     }//GEN-LAST:event_CirculoMouseExited
 
     private void InsertasAlumnosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InsertasAlumnosMouseEntered
-      InsertasAlumnos.setForeground(new Color (105, 218, 219));
+        InsertasAlumnos.setForeground(new Color(105, 218, 219));
     }//GEN-LAST:event_InsertasAlumnosMouseEntered
 
     private void InsertasAlumnosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InsertasAlumnosMouseExited
-         InsertasAlumnos.setForeground(Color.white);
+        InsertasAlumnos.setForeground(Color.white);
     }//GEN-LAST:event_InsertasAlumnosMouseExited
 
     private void ConsultarAlumMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConsultarAlumMouseEntered
-       ConsultarAlum.setForeground(new Color (105, 218, 219));
+        ConsultarAlum.setForeground(new Color(105, 218, 219));
     }//GEN-LAST:event_ConsultarAlumMouseEntered
 
     private void ConsultarAlumMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConsultarAlumMouseExited
-       ConsultarAlum.setForeground(Color.white);
+        ConsultarAlum.setForeground(Color.white);
     }//GEN-LAST:event_ConsultarAlumMouseExited
 
     private void DeleteAlumnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteAlumnMouseEntered
-         DeleteAlumn.setForeground(new Color (105, 218, 219));
+        DeleteAlumn.setForeground(new Color(105, 218, 219));
     }//GEN-LAST:event_DeleteAlumnMouseEntered
 
     private void DeleteAlumnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteAlumnMouseExited
-      DeleteAlumn.setForeground(Color.white);
+        DeleteAlumn.setForeground(Color.white);
     }//GEN-LAST:event_DeleteAlumnMouseExited
 
     private void CalculadoraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CalculadoraMouseEntered
-          Calculadora.setForeground(new Color (105, 218, 219));
+        Calculadora.setForeground(new Color(105, 218, 219));
     }//GEN-LAST:event_CalculadoraMouseEntered
 
     private void CalculadoraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CalculadoraMouseExited
-     Calculadora.setForeground(Color.white);
+        Calculadora.setForeground(Color.white);
     }//GEN-LAST:event_CalculadoraMouseExited
 
     /**

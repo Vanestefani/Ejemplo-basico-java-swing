@@ -18,7 +18,7 @@
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[530, 410]"/>
     </Property>
-    <Property name="visible" type="boolean" value="true"/>
+    <Property name="visible" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
