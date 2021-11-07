@@ -36,8 +36,7 @@ public class Eliminar extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        buttonGroup2 = new javax.swing.ButtonGroup();
+        ButtonGroup2 = new javax.swing.ButtonGroup();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jLabel2 = new javax.swing.JLabel();
@@ -46,7 +45,7 @@ public class Eliminar extends javax.swing.JInternalFrame {
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
 
-        buttonGroup1.add(jRadioButton1);
+        ButtonGroup2.add(jRadioButton1);
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("ESTUDIANTE");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -55,7 +54,7 @@ public class Eliminar extends javax.swing.JInternalFrame {
             }
         });
 
-        buttonGroup1.add(jRadioButton2);
+        ButtonGroup2.add(jRadioButton2);
         jRadioButton2.setText("USUARIOS");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,11 +186,10 @@ public class Eliminar extends javax.swing.JInternalFrame {
             }
 
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static javax.swing.ButtonGroup buttonGroup1;
-    public static javax.swing.ButtonGroup buttonGroup2;
+    public static javax.swing.ButtonGroup ButtonGroup2;
     public static javax.swing.JButton jButton1;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
