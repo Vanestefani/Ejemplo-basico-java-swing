@@ -249,8 +249,8 @@ System.exit(0);
     String user="";
     String pass="";
     
-        String usuario =this.Input_Usuario.getText();
-        String clave = String.valueOf(this.Input_password.getPassword());
+        String usuario =this.Input_Usuario.getText().trim();
+        String clave = String.valueOf(this.Input_password.getPassword()).trim();
          logica conec=new logica();    
         String sql ="select * from usuario where usuario='"+usuario+"' and  clave ='"+clave+"'";
         

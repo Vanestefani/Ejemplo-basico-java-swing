@@ -27,6 +27,9 @@ int xMouse,yMouse;
      */
     public Menu() {
         initComponents();
+         Circulo cir=new Circulo();
+        this.jDesktopPane1.add(cir);
+        cir.setVisible(true);
     }
 
     /**
@@ -41,17 +44,17 @@ int xMouse,yMouse;
         jMenuItem3 = new javax.swing.JMenuItem();
         Dasboard = new javax.swing.JPanel();
         PanelDerecha = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
-        jSeparator3 = new javax.swing.JSeparator();
-        TituloMenu = new javax.swing.JLabel();
         ConsultarAlum = new javax.swing.JButton();
-        jSeparator4 = new javax.swing.JSeparator();
-        jSeparator5 = new javax.swing.JSeparator();
         Calculadora = new javax.swing.JButton();
         DeleteAlumn = new javax.swing.JButton();
         InsertasAlumnos = new javax.swing.JButton();
         Circulo = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        TituloMenu = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
         PanelBarraSuperior = new javax.swing.JPanel();
         Btn_Salir = new javax.swing.JButton();
         Contenido = new javax.swing.JPanel();
@@ -65,7 +68,6 @@ int xMouse,yMouse;
         setMaximumSize(new java.awt.Dimension(740, 500));
         setMinimumSize(new java.awt.Dimension(740, 500));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(740, 500));
         setResizable(false);
         setSize(new java.awt.Dimension(740, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -78,24 +80,6 @@ int xMouse,yMouse;
 
         PanelDerecha.setBackground(new java.awt.Color(25, 52, 152));
         PanelDerecha.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
-        PanelDerecha.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 170, 20));
-
-        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
-        PanelDerecha.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 170, 20));
-
-        jSeparator3.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
-        PanelDerecha.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 170, 20));
-
-        TituloMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        TituloMenu.setForeground(new java.awt.Color(255, 255, 255));
-        TituloMenu.setText("Menu");
-        TituloMenu.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        PanelDerecha.add(TituloMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 80, 50));
 
         ConsultarAlum.setBackground(new java.awt.Color(25, 52, 152));
         ConsultarAlum.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -110,6 +94,12 @@ int xMouse,yMouse;
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ConsultarAlumMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ConsultarAlumMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ConsultarAlumMouseExited(evt);
+            }
         });
         ConsultarAlum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,14 +107,6 @@ int xMouse,yMouse;
             }
         });
         PanelDerecha.add(ConsultarAlum, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 170, 40));
-
-        jSeparator4.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
-        PanelDerecha.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 170, 20));
-
-        jSeparator5.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
-        PanelDerecha.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 170, 20));
 
         Calculadora.setBackground(new java.awt.Color(25, 52, 152));
         Calculadora.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -138,6 +120,12 @@ int xMouse,yMouse;
         Calculadora.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CalculadoraMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                CalculadoraMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                CalculadoraMouseExited(evt);
             }
         });
         Calculadora.addActionListener(new java.awt.event.ActionListener() {
@@ -160,6 +148,12 @@ int xMouse,yMouse;
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 DeleteAlumnMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                DeleteAlumnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                DeleteAlumnMouseExited(evt);
+            }
         });
         DeleteAlumn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,6 +174,12 @@ int xMouse,yMouse;
         InsertasAlumnos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 InsertasAlumnosMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                InsertasAlumnosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                InsertasAlumnosMouseExited(evt);
             }
         });
         InsertasAlumnos.addActionListener(new java.awt.event.ActionListener() {
@@ -202,6 +202,12 @@ int xMouse,yMouse;
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CirculoMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                CirculoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                CirculoMouseExited(evt);
+            }
         });
         Circulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,6 +215,32 @@ int xMouse,yMouse;
             }
         });
         PanelDerecha.add(Circulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 112, 170, 40));
+
+        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        PanelDerecha.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 170, 20));
+
+        jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        PanelDerecha.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 170, 20));
+
+        jSeparator3.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
+        PanelDerecha.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 170, 20));
+
+        TituloMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        TituloMenu.setForeground(new java.awt.Color(255, 255, 255));
+        TituloMenu.setText("Menu");
+        TituloMenu.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        PanelDerecha.add(TituloMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 80, 50));
+
+        jSeparator4.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
+        PanelDerecha.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 170, 10));
+
+        jSeparator5.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
+        PanelDerecha.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 170, 10));
 
         Dasboard.add(PanelDerecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 500));
 
@@ -357,6 +389,46 @@ int xMouse,yMouse;
         xMouse = evt.getX();
         yMouse = evt.getY();
     }//GEN-LAST:event_PanelBarraSuperiorMousePressed
+
+    private void CirculoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CirculoMouseEntered
+       Circulo.setForeground(new Color (105, 218, 219));
+    }//GEN-LAST:event_CirculoMouseEntered
+
+    private void CirculoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CirculoMouseExited
+        Circulo.setForeground(Color.white);
+    }//GEN-LAST:event_CirculoMouseExited
+
+    private void InsertasAlumnosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InsertasAlumnosMouseEntered
+      InsertasAlumnos.setForeground(new Color (105, 218, 219));
+    }//GEN-LAST:event_InsertasAlumnosMouseEntered
+
+    private void InsertasAlumnosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InsertasAlumnosMouseExited
+         InsertasAlumnos.setForeground(Color.white);
+    }//GEN-LAST:event_InsertasAlumnosMouseExited
+
+    private void ConsultarAlumMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConsultarAlumMouseEntered
+       ConsultarAlum.setForeground(new Color (105, 218, 219));
+    }//GEN-LAST:event_ConsultarAlumMouseEntered
+
+    private void ConsultarAlumMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ConsultarAlumMouseExited
+       ConsultarAlum.setForeground(Color.white);
+    }//GEN-LAST:event_ConsultarAlumMouseExited
+
+    private void DeleteAlumnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteAlumnMouseEntered
+         DeleteAlumn.setForeground(new Color (105, 218, 219));
+    }//GEN-LAST:event_DeleteAlumnMouseEntered
+
+    private void DeleteAlumnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteAlumnMouseExited
+      DeleteAlumn.setForeground(Color.white);
+    }//GEN-LAST:event_DeleteAlumnMouseExited
+
+    private void CalculadoraMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CalculadoraMouseEntered
+          Calculadora.setForeground(new Color (105, 218, 219));
+    }//GEN-LAST:event_CalculadoraMouseEntered
+
+    private void CalculadoraMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CalculadoraMouseExited
+     Calculadora.setForeground(Color.white);
+    }//GEN-LAST:event_CalculadoraMouseExited
 
     /**
      * @param args the command line arguments

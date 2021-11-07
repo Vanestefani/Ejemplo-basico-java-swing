@@ -1,12 +1,12 @@
 package autentificación.Interfaces;
 
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 /**
  *
  * @author USUARIO
@@ -29,92 +29,304 @@ public class Circulo extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        tipodato = new javax.swing.ButtonGroup();
+        Valor = new javax.swing.JTextField();
+        Btn_Calcular = new javax.swing.JButton();
+        Titulo = new javax.swing.JLabel();
+        PanelRadioButtons = new javax.swing.JPanel();
+        JRB_Radio = new javax.swing.JRadioButton();
+        JRB_Diametro = new javax.swing.JRadioButton();
+        JRB_Perimetro = new javax.swing.JRadioButton();
+        JRB_Area = new javax.swing.JRadioButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        LabelInputValor1 = new javax.swing.JLabel();
+        PanelResultados = new javax.swing.JPanel();
+        PanelrADIO = new javax.swing.JPanel();
+        LabelRadio = new javax.swing.JLabel();
+        Radio_Resultado = new javax.swing.JLabel();
+        Paneldiametro = new javax.swing.JPanel();
+        LabelRadio2 = new javax.swing.JLabel();
+        Diametro_Resultado = new javax.swing.JLabel();
+        Panelperimetro = new javax.swing.JPanel();
+        LabelRadio1 = new javax.swing.JLabel();
+        Perimetro_Resultado = new javax.swing.JLabel();
+        PanelArea = new javax.swing.JPanel();
+        LabelRadio3 = new javax.swing.JLabel();
+        AREA_Resultado1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBorder(null);
+        setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        setTitle("Calcular circunferencia");
+        setToolTipText("");
+        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/autentificación/Imagenes/icons8-burbuja-24.png"))); // NOI18N
         setMaximumSize(new java.awt.Dimension(530, 410));
         setMinimumSize(new java.awt.Dimension(530, 410));
+        setName("Calcular circunferencia"); // NOI18N
         setPreferredSize(new java.awt.Dimension(530, 410));
+        setVisible(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Radio");
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Valor.setBackground(new java.awt.Color(255, 255, 255));
+        Valor.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        Valor.setForeground(new java.awt.Color(25, 52, 152));
+        Valor.setBorder(null);
+        Valor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                ValorActionPerformed(evt);
             }
         });
-
-        jButton1.setText("Hallar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        Valor.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                ValorKeyTyped(evt);
             }
         });
+        getContentPane().add(Valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 460, 20));
 
-        jButton2.setText("Salir");
+        Btn_Calcular.setBackground(new java.awt.Color(25, 52, 152));
+        Btn_Calcular.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Btn_Calcular.setForeground(new java.awt.Color(255, 255, 255));
+        Btn_Calcular.setText("Hallar");
+        Btn_Calcular.setBorder(null);
+        Btn_Calcular.setBorderPainted(false);
+        Btn_Calcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_CalcularActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Btn_Calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 80, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(417, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(108, 108, 108)
-                        .addComponent(jButton2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))))
-                .addGap(51, 51, 51))
+        Titulo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Titulo.setForeground(new java.awt.Color(25, 52, 152));
+        Titulo.setText("Calcular circunferencia");
+        getContentPane().add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, -1, -1));
+
+        PanelRadioButtons.setBackground(new java.awt.Color(255, 255, 255));
+        PanelRadioButtons.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Elige el dato que tengas del circulo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12), new java.awt.Color(25, 52, 152))); // NOI18N
+        PanelRadioButtons.setLayout(new java.awt.GridLayout(1, 0));
+
+        JRB_Radio.setBackground(new java.awt.Color(255, 255, 255));
+        tipodato.add(JRB_Radio);
+        JRB_Radio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        JRB_Radio.setForeground(new java.awt.Color(25, 52, 152));
+        JRB_Radio.setSelected(true);
+        JRB_Radio.setText("Radio");
+        PanelRadioButtons.add(JRB_Radio);
+
+        JRB_Diametro.setBackground(new java.awt.Color(255, 255, 255));
+        tipodato.add(JRB_Diametro);
+        JRB_Diametro.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        JRB_Diametro.setForeground(new java.awt.Color(25, 52, 152));
+        JRB_Diametro.setText("Diametro");
+        PanelRadioButtons.add(JRB_Diametro);
+
+        JRB_Perimetro.setBackground(new java.awt.Color(255, 255, 255));
+        tipodato.add(JRB_Perimetro);
+        JRB_Perimetro.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        JRB_Perimetro.setForeground(new java.awt.Color(25, 52, 152));
+        JRB_Perimetro.setText("Perímetro");
+        PanelRadioButtons.add(JRB_Perimetro);
+
+        JRB_Area.setBackground(new java.awt.Color(255, 255, 255));
+        tipodato.add(JRB_Area);
+        JRB_Area.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        JRB_Area.setForeground(new java.awt.Color(25, 52, 152));
+        JRB_Area.setText("Área");
+        PanelRadioButtons.add(JRB_Area);
+
+        getContentPane().add(PanelRadioButtons, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 470, 80));
+
+        jSeparator1.setBackground(new java.awt.Color(25, 52, 152));
+        jSeparator1.setForeground(new java.awt.Color(25, 52, 152));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 460, 10));
+
+        LabelInputValor1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        LabelInputValor1.setForeground(new java.awt.Color(25, 52, 152));
+        LabelInputValor1.setText("Ingresa el valor ");
+        getContentPane().add(LabelInputValor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
+
+        PanelResultados.setBackground(new java.awt.Color(255, 255, 255));
+        PanelResultados.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Resultados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12), new java.awt.Color(25, 52, 152))); // NOI18N
+        PanelResultados.setLayout(new java.awt.GridBagLayout());
+
+        PanelrADIO.setBackground(new java.awt.Color(255, 255, 255));
+        PanelrADIO.setLayout(new java.awt.GridLayout(1, 0));
+
+        LabelRadio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        LabelRadio.setForeground(new java.awt.Color(25, 52, 152));
+        LabelRadio.setText("Radio :");
+        PanelrADIO.add(LabelRadio);
+
+        Radio_Resultado.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Radio_Resultado.setForeground(new java.awt.Color(25, 52, 152));
+        Radio_Resultado.setText("         ");
+        PanelrADIO.add(Radio_Resultado);
+
+        PanelResultados.add(PanelrADIO, new java.awt.GridBagConstraints());
+
+        Paneldiametro.setBackground(new java.awt.Color(255, 255, 255));
+        Paneldiametro.setLayout(new java.awt.GridLayout(1, 0));
+
+        LabelRadio2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        LabelRadio2.setForeground(new java.awt.Color(25, 52, 152));
+        LabelRadio2.setText("Diametro:");
+        Paneldiametro.add(LabelRadio2);
+
+        Diametro_Resultado.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Diametro_Resultado.setForeground(new java.awt.Color(25, 52, 152));
+        Diametro_Resultado.setText("         ");
+        Paneldiametro.add(Diametro_Resultado);
+
+        PanelResultados.add(Paneldiametro, new java.awt.GridBagConstraints());
+
+        Panelperimetro.setBackground(new java.awt.Color(255, 255, 255));
+        Panelperimetro.setLayout(new java.awt.GridLayout(1, 0));
+
+        LabelRadio1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        LabelRadio1.setForeground(new java.awt.Color(25, 52, 152));
+        LabelRadio1.setText(" Perímetro:");
+        Panelperimetro.add(LabelRadio1);
+
+        Perimetro_Resultado.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        Perimetro_Resultado.setForeground(new java.awt.Color(25, 52, 152));
+        Perimetro_Resultado.setText("         ");
+        Panelperimetro.add(Perimetro_Resultado);
+
+        PanelResultados.add(Panelperimetro, new java.awt.GridBagConstraints());
+
+        PanelArea.setBackground(new java.awt.Color(255, 255, 255));
+        PanelArea.setLayout(new java.awt.GridLayout(1, 0));
+
+        LabelRadio3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        LabelRadio3.setForeground(new java.awt.Color(25, 52, 152));
+        LabelRadio3.setText("Área:");
+        PanelArea.add(LabelRadio3);
+
+        AREA_Resultado1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        AREA_Resultado1.setForeground(new java.awt.Color(25, 52, 152));
+        AREA_Resultado1.setText("         ");
+        PanelArea.add(AREA_Resultado1);
+
+        PanelResultados.add(PanelArea, new java.awt.GridBagConstraints());
+
+        getContentPane().add(PanelResultados, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 470, 90));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 530, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(117, Short.MAX_VALUE))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 390, Short.MAX_VALUE)
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 390));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    String Radio=this.jTextField1.getText();
-    double Radio1=Double.parseDouble(Radio);
-    double area=3.1416*Radio1*Radio1;
-    String a="el area es"+""+area;
-    this.jLabel2.getText();
-  
-  
-          // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void Btn_CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_CalcularActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        float Valor_Ingresado;
+        Valor_Ingresado = (Valor.getText().isEmpty())? 0:Float.parseFloat(Valor.getText());
+                
+               
+        float Radio, Area, Diametro, Perimetro;
+        
+           if (Valor.getText().isEmpty()
+                   ) 
+           
+           {
+            JOptionPane.showMessageDialog(this, "Ingrese un valor");
+            
+        } 
+        
+        
+      if (JRB_Radio.getModel().isSelected()) {
+            Radio = Valor_Ingresado;
+            Area = (float) (Math.PI * Math.pow(Radio, 2));
+            Perimetro = (float) (2 * Math.PI * Radio);
+            Diametro = 2 * Radio;
+            Radio_Resultado.setText(String.valueOf(Radio));
+            Diametro_Resultado.setText(String.valueOf(Diametro));
+            Perimetro_Resultado.setText(String.valueOf(Perimetro));
+            AREA_Resultado1.setText(String.valueOf(Area));
+        } else if (JRB_Diametro.getModel().isSelected()) {
+            Diametro = Valor_Ingresado;
+
+            Radio = Diametro / 2;
+            Area = (float) (Math.PI * Math.pow(Radio, 2));
+            Perimetro = (float) (2 * Math.PI * Radio);
+
+            Radio_Resultado.setText(String.valueOf(Radio));
+            Diametro_Resultado.setText(String.valueOf(Diametro));
+            Perimetro_Resultado.setText(String.valueOf(Perimetro));
+            AREA_Resultado1.setText(String.valueOf(Area));
+        } else if (JRB_Perimetro.getModel().isSelected()) {
+
+            Perimetro = Valor_Ingresado;
+            Radio = (float) (Perimetro / (2 * Math.PI));
+            Diametro = 2 * Radio;
+
+            Area = (float) (Math.PI * Math.pow(Radio, 2));
+
+            Radio_Resultado.setText(String.valueOf(Radio));
+            Diametro_Resultado.setText(String.valueOf(Diametro));
+            Perimetro_Resultado.setText(String.valueOf(Perimetro));
+            AREA_Resultado1.setText(String.valueOf(Area));
+        } else if (JRB_Area.getModel().isSelected()) {
+            Area = Valor_Ingresado;
+            Perimetro = (float) Math.sqrt(Area / Math.PI);
+            Radio = (float) (Perimetro / (2 * Math.PI));
+            Diametro = 2 * Radio;
+
+            Radio_Resultado.setText(String.valueOf(Radio));
+            Diametro_Resultado.setText(String.valueOf(Diametro));
+            Perimetro_Resultado.setText(String.valueOf(Perimetro));
+            AREA_Resultado1.setText(String.valueOf(Area));
+        }
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_Btn_CalcularActionPerformed
+
+    private void ValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ValorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ValorActionPerformed
+
+    private void ValorKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ValorKeyTyped
+
+    }//GEN-LAST:event_ValorKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel AREA_Resultado1;
+    private javax.swing.JButton Btn_Calcular;
+    private javax.swing.JLabel Diametro_Resultado;
+    private javax.swing.JRadioButton JRB_Area;
+    private javax.swing.JRadioButton JRB_Diametro;
+    private javax.swing.JRadioButton JRB_Perimetro;
+    private javax.swing.JRadioButton JRB_Radio;
+    private javax.swing.JLabel LabelInputValor1;
+    private javax.swing.JLabel LabelRadio;
+    private javax.swing.JLabel LabelRadio1;
+    private javax.swing.JLabel LabelRadio2;
+    private javax.swing.JLabel LabelRadio3;
+    private javax.swing.JPanel PanelArea;
+    private javax.swing.JPanel PanelRadioButtons;
+    private javax.swing.JPanel PanelResultados;
+    private javax.swing.JPanel Paneldiametro;
+    private javax.swing.JPanel Panelperimetro;
+    private javax.swing.JPanel PanelrADIO;
+    private javax.swing.JLabel Perimetro_Resultado;
+    private javax.swing.JLabel Radio_Resultado;
+    private javax.swing.JLabel Titulo;
+    private javax.swing.JTextField Valor;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.ButtonGroup tipodato;
     // End of variables declaration//GEN-END:variables
 }
