@@ -7,11 +7,11 @@ Ejemplo basico de java swing  en cual se realiza una conexion con una base de da
 <img src="Capturas/1.png">
 
 2. Un crud de alumnos
-<img src="Capturas/4.png">
-<img src="Capturas/6.png">
-<img src="Capturas/7.png">
+<img src="/Capturas/4.png">
+<img src="/Capturas/6.png">
+<img src="/Capturas/7.png">
 3. una sencilla calculadora
-<img src="Capturas/5.png">
+<img src="/Capturas/5.png">
 
  y una calculadora de  circunferencia
 
