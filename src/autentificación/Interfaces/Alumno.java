@@ -82,6 +82,7 @@ public class Alumno extends javax.swing.JInternalFrame {
         panelprincipal.add(Label_Apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
 
         txt_Grado.setBackground(new java.awt.Color(255, 255, 255));
+        txt_Grado.setForeground(new java.awt.Color(25, 52, 152));
         txt_Grado.setBorder(null);
         panelprincipal.add(txt_Grado, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 274, 27));
 
@@ -117,12 +118,18 @@ public class Alumno extends javax.swing.JInternalFrame {
         panelprincipal.add(Btn_ingreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 100, 40));
 
         txt_apellido.setBackground(new java.awt.Color(255, 255, 255));
+        txt_apellido.setForeground(new java.awt.Color(25, 52, 152));
         txt_apellido.setBorder(null);
         panelprincipal.add(txt_apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 274, 25));
 
         txt_nombre.setBackground(new java.awt.Color(255, 255, 255));
         txt_nombre.setForeground(new java.awt.Color(25, 52, 152));
         txt_nombre.setBorder(null);
+        txt_nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_nombreActionPerformed(evt);
+            }
+        });
         panelprincipal.add(txt_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 270, 27));
 
         txt_titulo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -243,6 +250,10 @@ public class Alumno extends javax.swing.JInternalFrame {
     private void Rd_femeninioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Rd_femeninioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Rd_femeninioActionPerformed
+
+    private void txt_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_nombreActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
